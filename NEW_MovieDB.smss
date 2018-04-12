@@ -1,0 +1,20 @@
+Base Properties 
+OWL	db/NEW_MovieDB/NEW_MovieDB_OWL.OWL
+PIXEL_UPDATE	true
+PKQL_UPDATED	true
+ENGINE	NEW_MovieDB
+SOLR_RELOAD	false
+FILL_EMPTY_DATATYPES	false
+HIDDEN_DATABASE	false
+ENGINE_TYPE	prerna.engine.impl.rdbms.RDBMSNativeEngine
+RDBMS_INSIGHTS	db/NEW_MovieDB/insights_database
+RDBMS_TYPE	H2_DB
+DREAMER	db/NEW_MovieDB/NEW_MovieDB_Questions.properties
+
+
+DRIVER	org.h2.Driver
+USERNAME	sa
+PASSWORD	
+CONNECTION_URL	jdbc:h2:nio:@BaseFolder@/db/@ENGINE@/database;query_timeout=180000;early_filter=true;query_cache_size=24;cache_size=32768
+USE_OUTER_JOINS	false
+# USE_CONNECTION_POOLING	true

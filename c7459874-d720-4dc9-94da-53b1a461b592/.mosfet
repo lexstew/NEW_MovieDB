@@ -1,0 +1,7 @@
+{
+  "layout": "Grid",
+  "rdbmsId": "c7459874-d720-4dc9-94da-53b1a461b592",
+  "engine": "NEW_MovieDB",
+  "insightName": "Test Panel Name Change",
+  "recipe": "AddPanel ( 0 ) ;Panel ( 0 ) | AddPanelEvents ( { \"onSingleClick\" : { \"Unfilter\" : [ { \"panel\" : \"\" , \"query\" : \"\u003cencode\u003eUnfilterFrame(\u003cSelectedColumn\u003e);\u003c/encode\u003e\" , \"options\" : { } , \"refresh\" : true , \"default\" : true , \"disabled\" : false } ] } , \"onBrush\" : { \"Filter\" : [ { \"panel\" : \"\" , \"query\" : \"\u003cencode\u003eif(IsEmpty(\u003cSelectedValues\u003e), UnfilterFrame(\u003cSelectedColumn\u003e), SetFrameFilter(\u003cSelectedColumn\u003e\u003d\u003d\u003cSelectedValues\u003e));\u003c/encode\u003e\" , \"options\" : { } , \"refresh\" : true , \"default\" : true , \"disabled\" : false } ] } } ) ;Panel ( 0 ) | RetrievePanelEvents ( ) ;Panel ( 0 ) | SetPanelView ( \"visualization\" , \"\u003cencode\u003e{\"type\":\"echarts\"}\u003c/encode\u003e\" ) ;Panel ( 0 ) | SetPanelView ( \"federate-view\" ) ;Panel ( 0 ) | SetPanelView ( \"visualization\" ) ;CreateFrame ( grid ) .as ( [ \u0027FRAME153955\u0027 ] ) ;Database ( NEW_MovieDB ) | Select ( Genre ) .as ( [ Genre ] ) | Import ( ) ;Frame ( ) | Select ( Genre ) .as ( [ Genre ] ) | With ( Panel ( 0 ) ) | Format ( type \u003d [ \u0027table\u0027 ] ) | TaskOptions ( { \"0\" : { \"layout\" : \"Grid\" , \"alignment\" : { \"label\" : [ \"Genre\" ] } } } ) | Collect ( 500 ) ;Panel(0)|AddPanelOrnaments({\"showMenu\":true});Panel(0)|RetrievePanelOrnaments(\"showMenu\");"
+}
